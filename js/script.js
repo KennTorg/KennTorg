@@ -43,6 +43,7 @@ var games = [
 for (var i = 0; i < games.length; i++) {
   if(i >= 3.5)
 }
+//Look in to the ul and li thingy how to add em to the code
 
 // Question 4
 //fucntion whatIDontLike("carrot"){
