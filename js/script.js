@@ -1,47 +1,51 @@
 /* ------ Javascript ------ */
+// Programming Foundations CA
+// Question 1
+var outOfStock = true;
 
-/* Task 1 */
-// string
-var cryptocoin = "Bitcoin";
-console.log(cryptocoin);
-// number
-var age = 30;
-console.log(age);
-// boolean
-var iAmRich = false;
-console.log(iAmRich);
-
-/* Task 2 */
-// FirstName
-var firstName = "Kennet";
-// LastName
-var lastName = "Torgersen";
-// Names combined:
-var fullName = firstName + " " + lastName;
-console.log(fullName);
-
-/* Task 3 */
-//Var
-var animal = "frog";
-console.log(animal);
-
-typeof animal;
-/* I DONT GET IT .......... so annoying */
-
-/* Task 4 */
-// Var
-var orderHasShipped = true;
-// If the order was shipped
-if ((orderHasShipped = true)) {
-  console.log("The order shipped");
-}
-// If the order was not shipped
-else {
-  console.log("The order did not ship");
+if (outOfStock === true) {
+  console.log("Out of stock");
+} else {
+  console.log("In stock");
 }
 
-/* Task 5 */
-// Counting  + 1 from 7 to 13
-for (var i = 7; i <= 13; i++) {
-  console.log(i);
+// Question 2
+for (var i = 15; i <= 25; i++) {
+  if (var i === 17 || i === 20) {
+    console.log(i);
+  }
 }
+
+// Question 3
+var games = [
+  {
+    title: "Grand Theft Auto",
+    rating: 4.48,
+  },
+  {
+    title: "Portal 2",
+    rating: 3.5,
+  },
+  {
+    title: "Team Fortress",
+    rating: null,
+  },
+  {
+    title: "The Witcher",
+    rating: 3.0,
+  },
+  {
+    title: "The Elder Scrolls",
+    rating: 2.9,
+  },
+];
+
+for (var i = 0; i < games.length; i++) {
+  if(i >= 3.5)
+}
+
+// Question 4
+//fucntion whatIDontLike("carrot"){
+//console.log("I don't like ")
+//}
+//whatIDontLike();
