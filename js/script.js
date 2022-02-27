@@ -1,52 +1,50 @@
-/* ------ Javascript ------ */
-// Programming Foundations CA
-// Question 1
-var outOfStock = true;
+/*fetch("https://f1-drivers-2021.p.rapidapi.com/drivers", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "f1-drivers-2021.p.rapidapi.com",
+		"x-rapidapi-key": "9a8ae15c5bmshf98d01efc34253bp1ae145jsn62409f75c5d1"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+*/
 
-if (outOfStock === true) {
-  console.log("Out of stock");
-} else {
-  console.log("In stock");
+const url = "https://f1-drivers-2021.p.rapidapi.com/drivers/";
+const proxy = {
+    headers: {
+        "x-rapidapi-host": "f1-drivers-2021.p.rapidapi.com",
+        "x-rapidapi-key": "9a8ae15c5bmshf98d01efc34253bp1ae145jsn62409f75c5d1"
+    }
+};
+
+const resultsContainer = document.querySelector(".results");
+
+async function f1Drivers() {
+    try {
+        const response = await fetch(url, proxy);
+
+        const results = await response.json();
+
+        const info = results;
+        //this gave me a headache. i dont know why i didnt need the .all property
+        resultsContainer.innerHTML = "";
+
+        for (let i = 0; i < info.length; i++) {
+            console.log(info[i].title);
+
+            resultsContainer.innerHTML += `<a href="details.html?title${info}" class="result">
+                                            <h2>${info[i].title}</h2>
+                                            <h3>${info[i].team}</h3>
+                                            <h4>${info[i].country}</h4>
+                                            </a>`;
+        }
+    } catch (error) {
+        console.log(error);
+    }
 }
 
-// Question 2
-for (var i = 15; i <= 25; i++) {
-  if (var i === 17 || i === 20) {
-    console.log(i);
-  }
-}
-
-// Question 3
-var games = [
-  {
-    title: "Grand Theft Auto",
-    rating: 4.48,
-  },
-  {
-    title: "Portal 2",
-    rating: 3.5,
-  },
-  {
-    title: "Team Fortress",
-    rating: null,
-  },
-  {
-    title: "The Witcher",
-    rating: 3.0,
-  },
-  {
-    title: "The Elder Scrolls",
-    rating: 2.9,
-  },
-];
-
-for (var i = 0; i < games.length; i++) {
-  if(i >= 3.5)
-}
-//Look in to the ul and li thingy how to add em to the code
-
-// Question 4
-//fucntion whatIDontLike("carrot"){
-//console.log("I don't like ")
-//}
-//whatIDontLike();
+f1Drivers();

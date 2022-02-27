@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta hhp-equiv="X-UA-Compatible" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Community_Sience_Museum" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <title>F1 Contact</title>
+    </head>
+    <body>
+        <main class="container">
+            <form id="contactForm">
+                <div>
+                    <label>
+                        Name (required)
+                        <input name="name" id="name" />
+                    </label>
+                    <div class="form-error" id="nameError">Please enter a valid Name</div>
+                </div>
+                <div>
+                    <label>
+                        Subject
+                        <input name="subject" id="subject" />
+                    </label>
+                    <div class="form-error" id="subjectError">
+                        must have a value with a minimum length of 10
+                    </div>
+                </div>
+                <div>
+                    <label>
+                        Email
+                        <input name="email" id="email" />
+                    </label>
+                    <div class="form-error" id="emailError">
+                        must have a value and be formatted like an email address
+                    </div>
+                </div>
+                <div>
+                    <label>
+                        Address
+                        <input name="address" id="address" />
+                    </label>
+                    <div class="form-error" id="addressError">
+                        must have a value with a minimum length of 25
+                    </div>
+                </div>
+                <button>Submit</button>
+            </form>
+        </main>
+        <script src="js/script.js"></script>
+        <script src="js/detail.js"></script>
+        <script src="js/contact.js"></script>
+    </body>
+</html>
