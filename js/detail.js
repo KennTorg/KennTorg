@@ -30,4 +30,4 @@ async function driverDetails() {
 
 driverDetails();
 
-// Hmmmm i dont get it. i've tryed so many different things now :(
+// Hmmmm i dont get it. i've tryed so many different things now, i give up :(
