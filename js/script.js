@@ -1,50 +1,21 @@
-/*fetch("https://f1-drivers-2021.p.rapidapi.com/drivers", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "f1-drivers-2021.p.rapidapi.com",
-		"x-rapidapi-key": "9a8ae15c5bmshf98d01efc34253bp1ae145jsn62409f75c5d1"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
-*/
-
-const url = "https://f1-drivers-2021.p.rapidapi.com/drivers/";
-const proxy = {
-    headers: {
-        "x-rapidapi-host": "f1-drivers-2021.p.rapidapi.com",
-        "x-rapidapi-key": "9a8ae15c5bmshf98d01efc34253bp1ae145jsn62409f75c5d1"
-    }
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+    myFunction();
 };
 
-const resultsContainer = document.querySelector(".results");
+// Get the header
+const header = document.getElementById("myHeader");
 
-async function f1Drivers() {
-    try {
-        const response = await fetch(url, proxy);
+const links = document.getElementsByClassName("nav-menu");
 
-        const results = await response.json();
+// Get the offset position of the navbar
+const sticky = header.offsetTop;
 
-        const info = results;
-        //this gave me a headache. i dont know why i didnt need the .all property
-        resultsContainer.innerHTML = "";
-
-        for (let i = 0; i < info.length; i++) {
-            console.log(info[i].title);
-
-            resultsContainer.innerHTML += `<a href="details.html?title${info}" class="result">
-                                            <h2>${info[i].title}</h2>
-                                            <h3>${info[i].team}</h3>
-                                            <h4>${info[i].country}</h4>
-                                            </a>`;
-        }
-    } catch (error) {
-        console.log(error);
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
     }
 }
-
-f1Drivers();

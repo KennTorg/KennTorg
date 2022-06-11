@@ -2,21 +2,151 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta hhp-equiv="X-UA-Compatible" />
+        <meta name="description" content="This is my portfolio" />
+        <meta name="author" content="tg123" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Community_Sience_Museum" />
         <link href="css/styles.css" rel="stylesheet" />
-        <title>F1 Data</title>
+        <script src="https://kit.fontawesome.com/d3b18d85d7.js" crossorigin="anonymous"></script>
+        <title>My personal portofolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet"> 
     </head>
     <body>
+        <header class="home-header" id="myHeader">
+            <a href="index.html"> <spann class="logo">KennTorg | Portfolio</span></a>
+            <nav class="links">
+                
+                <ul class="nav-menu">
+                    <li class="nav-link"><a href="index.html" class="nav-a">Home</a></li>
+                    <li class="nav-link"><a href="#about" class="nav-a">About</a></li>
+                    <li class="nav-link"><a href="#work" class="nav-a">Work</a></li>
+                    <li class="nav-link"><a href="#contact" class="nav-a">Contact</a></li>
+                    
+                </ul>
+                <div class="hamburger">
+                    <span class="bar1"></span>
+                    <span class="bar2"></span>
+                    <span class="bar3"></span>
+                 </div>
+            </nav>
+        </header>
         <main>
-            <h1>F1 Drivers</h1>
+            <section id="home">
+                <div class="welcome">
+                    <h1>Hey, Welcome!</h1>
+                    <h2>My name is Kennet Torgersen</h2>
+                    <h2>This is my portfolio.</h2>
+                </div>
+            </section>
+            <section id="about">
+                <div>
+                    <img src="/Images/me.png" alt="OWNED nft" />
+                </div>
+                <div class="about-me">
+                    <div>
+                        <h2>About me</h2>
+                        <p>I am based in Fredrikstad, Norway. <br>Im currently studying Front-end development at Noroff.<br> 
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Goals</h3>
+                        <p>My goals are to learn as much as possible about this space.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="work">
+                <h2>My Work</h2>
+                <div class="project-container">
+                    <div class="card">
+                        <img src="Images/csm.jpg" alt="CSM frontpage" />
+                        
+                            <h3>Community Science Museum</h3>
+                            <p>Community Science Museum were built with html and css. To display the museums exhibitions.</p>
+                            <a href="https://communitysciencemuseumproject.netlify.app/"><button>Netlify</button></a>
+                            <a href="https://github.com/KennTorg/SemesterProject"><button>Github</button></a>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="Images/rainydays.jpg" alt="rainydays frontpage" />
+                        
+                            <h3>Rainydays</h3>
+                            <p>This site were made with html, css and javascript. its a site that sells quality jackets for hikers and mountaineers.</p>
+                            <a href="rainydaysexample.netlify.app"><button>Netlify</button></a>
+                            <a href="https://github.com/Noroff-FEU-Assignments/cross-course-project-KennTorg"><button>Github</button></a>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="Images/knr fron.jpg" alt="knr frontpage" />
+                        
+                            <h3>Know Nothing Racing Blog</h3>
+                            <p>This is a blog for the racingteam that compete in the porche cup. This site is built with  HTML, CSS, JS and WP</p>
+                            <a href="https://knownothingracingblog.netlify.app"><button>Netlify</button></a>
+                            <a href="https://github.com/Noroff-FEU-Assignments/project-exam-1-KennTorg"><button>Github</button></a>
+                        
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="contact-form">
+                <div class="in-touch">
+                    <h2>Get in touch with me:</h2>
+                    <p>Use this form to get in touch with me<br>with any code or design request you might have.</p>
+                </div>
+                <form id="contactForm">
+                    <div>
+                        <label>
+                            Name (required)
+                            <input name="name" id="name" />
+                        </label>
+                        <div class="form-error" id="nameError">Please enter a valid Name</div>
+                    </div>
+                    <div>
+                        <label>
+                            Email
+                            <input name="email" id="email" />
+                        </label>
+                        <div class="form-error" id="emailError">
+                            must have a value and be formatted like an email address
+                        </div>
+                    </div>
+                    <div>
+                        <label class="message-input">
+                            Message
+                            <input name="message" id="message" />
+                        </label>
+                        <div class="form-error" id="messageError">
+                            message must have a value with a minimum length of 10
+                        </div>
+                    </div>
+                    <button class="submitbtn">Submit</button>
+                </form>
+            </section>
         </main>
-        <div class="results">
-            <div class="loader"></div>
-        </div>
+        <footer>
+            <div class="copyright">
+                <span class="copy">Copyright &copy; KennTorg | pineapplepizza.no | 2022</span>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" alt="facebook"
+                    ><i class="fab fa-facebook-square"></i
+                ></a>
+                <a href="https://www.instagram.com" alt="instagram"
+                    ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://twitter.com/home" alt="twitter"
+                    ><i class="fab fa-twitter-square"></i
+                ></a>
+                <a href="https://github.com/KennTorg" alt="github"
+                    ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="https://www.linkedin.com/" alt="linkedin"
+                    ><i class="fa-brands fa-linkedin"></i
+                ></a>
+            </div>
+        </footer>
         <script src="js/script.js"></script>
-        <script src="js/detail.js"></script>
         <script src="js/contact.js"></script>
+        <script src="js/hamburger.js"></script>
     </body>
 </html>
